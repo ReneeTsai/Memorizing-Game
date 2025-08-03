@@ -1,15 +1,122 @@
-# Memorizing Game
+🃏 Memorizing Game
+A web-based memory card matching game built using Flask, JavaScript, HTML/CSS, and SQLite.
 
-## Project Image
+<br>
+🖼️ Project Screenshot
 
-![MyImage](./public/S2-2.A18_MemorizingGame.PNG)
 
-## The game rules are as follows:
+<br>
+🎮 Game Rules
+The game uses a standard 52-card deck (spades, hearts, diamonds, clubs; each from 1 to 13).
 
-A deck of playing cards consists of 52 cards, divided into four suits: spades, hearts, diamonds, and clubs. Each suit has 13 cards numbered from 1 to 13.
+All cards are laid face down at the start of the game.
 
-At the beginning of the game, all 52 cards are placed face down on the table, and players need to flip the cards to reveal their numbers.
+Players can flip two cards at a time:
 
-Players can only flip two cards at a time. If the two flipped cards have the same number, it is a successful match, and the matched cards can be kept in the flipped position. If the match is unsuccessful, the cards will be flipped back over, and players need to remember the numbers to find a successful match in the next turn.
+✅ If the numbers match (e.g., 7♦ and 7♠), they stay face up.
 
-The goal for players is to flip all 52 cards or 26 pairs. Each successful match earns 10 points, and the objective is to accumulate 260 points to complete the mission.
+❌ If not, they flip back down.
+
+Each correct match scores 10 points.
+
+The goal is to match all 26 pairs for a total of 260 points.
+
+<br>
+💻 Features
+🔐 User registration and login/logout system
+
+📊 Individual player score tracking via SQLite database
+
+🧠 Game logic entirely in JavaScript
+
+📝 Responsive frontend with real-time score and attempt counter
+
+🔄 Server-managed session to persist login state
+
+<br>
+📁 Project Structure
+graphql
+複製
+編輯
+project/
+├── static/
+│   ├── app.js               # JavaScript logic for the card game
+│   └── style/
+│       └── style.css        # Styling for the game UI
+├── templates/
+│   ├── index.html           # Game interface (after login)
+│   └── layout.html (optional)
+├── database.db              # SQLite database file (auto-generated)
+├── app.py                   # Flask backend logic
+└── README.md                # You are here
+<br>
+🧠 Tech Stack
+Layer	Tech
+Frontend	HTML, CSS, JavaScript
+Backend	Python (Flask)
+Database	SQLite
+Auth	Flask Sessions
+Deployment	Localhost / Flask server
+
+<br>
+🚀 How to Run
+Install dependencies
+
+bash
+複製
+編輯
+pip install flask
+Start the Flask server
+
+bash
+複製
+編輯
+python app.py
+Play the game
+
+Visit http://127.0.0.1:5000
+
+Register an account
+
+Log in
+
+Enjoy matching cards!
+
+🔒 Note: The database file database.db will be created automatically on first run.
+
+<br>
+🗃️ Database Schema
+users
+
+id (INTEGER PRIMARY KEY)
+
+username (TEXT, unique)
+
+password (TEXT)
+
+scores
+
+id (INTEGER PRIMARY KEY)
+
+user_id (INTEGER, FOREIGN KEY)
+
+score (INTEGER, default 0)
+
+tries (INTEGER, default 0)
+
+<br>
+✅ To Do (Optional Improvements)
+ Show player’s score history
+
+ Add timer and ranking
+
+ Add game restart or new round button
+
+ Hash passwords using werkzeug.security
+
+ Deploy to cloud (e.g., Render, Heroku)
+
+<br>
+🙋 Author
+Made with 💡 and 🎹 by Rachel Tsai
+Based on CS50 Web Programming
