@@ -2,6 +2,10 @@
 
 A web-based memory card matching game built using **Flask**, **JavaScript**, **HTML/CSS**, and **SQLite**.
 
+
+#### Video Demo:  <URL [HERE](https://www.youtube.com/watch?v=HSgES86IRFg)>
+#### Description:
+
 ## 📸 Project Screenshot
 
 ![MyImage](./public/S2-2.A18_MemorizingGame.PNG)
