@@ -62,11 +62,14 @@ Visit: http://127.0.0.1:5000
 
 ###4. Register & Play
 Register a new account
+```
+
+
 
 ## Log in to start the game
 
 
-## Author
+## 🙋 Author
 Created by Rachel Tsai
 Based on the CS50 Web Programming course.
 
